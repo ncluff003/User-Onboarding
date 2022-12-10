@@ -15,6 +15,10 @@ export const ErrorContainer = styled.div`
 export const Error = styled.li`
   position: relative;
   height: max-content;
-  width: max-content;
-  padding: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #cf352e;
 `;

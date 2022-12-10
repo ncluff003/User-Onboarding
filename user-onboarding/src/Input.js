@@ -18,5 +18,18 @@ export const Input = styled.input`
 
   &:focus {
     outline: none;
+    border-color: #0047ab;
+    color: #0047ab;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const CheckboxInput = styled(Input)`
+  width: 10%;
+  &:hover {
+    cursor: pointer;
   }
 `;

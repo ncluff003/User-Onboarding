@@ -75,12 +75,6 @@ function App() {
 
   return (
     <OnboardingContainer>
-      <UserList>
-        {users &&
-          users.map((user, index) => {
-            return <User user={user} key={index} />;
-          })}
-      </UserList>
       <ErrorContainer>
         {formErrors && (
           <ol className="error-list">
@@ -122,6 +116,12 @@ function App() {
           Submit
         </Button>
       </Form>
+      <UserList>
+        {users &&
+          users.map((user, index) => {
+            return <User user={user} key={index} />;
+          })}
+      </UserList>
     </OnboardingContainer>
   );
 }

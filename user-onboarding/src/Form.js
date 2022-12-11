@@ -9,6 +9,8 @@ export const Form = styled.form`
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
+  padding-top: 2rem;
+  border-top: 0.2rem groove #ddddddaa;
 `;
 
 /*

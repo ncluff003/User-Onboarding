@@ -5,15 +5,15 @@ import { DateTime } from "luxon";
 export const UserList = styled.section`
   position: relative;
   height: max-content;
-  width: 50vw;
+  width: 100%;
   padding: 2rem;
-  border-bottom: 0.2rem groove #ddddddaa;
+  border-top: 0.2rem groove #ddddddaa;
 `;
 
 const StyledUser = styled.div`
   position: relative;
   height: max-content;
-  width: 57.5%;
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
@@ -46,7 +46,7 @@ const StyledUserInformation = styled.div`
   min-height: 4rem;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 
   & p {
@@ -65,7 +65,6 @@ export const User = function (props) {
       </StyledUserHeader>
       <StyledUserInformation>
         <p>{`Email: ${email}`}</p>
-        <p>{`Agreed To Terms: ${agree}`}</p>
         <p>{`Password: ${password
           .split("")
           .map((letter) => {

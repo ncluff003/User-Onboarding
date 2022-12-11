@@ -55,6 +55,7 @@ function App() {
         });
         console.log(response.data);
         setUsers([...users, response.data]);
+        setFormValues(initialOnboardingValues);
       };
       onboard();
     } catch (error) {}
@@ -93,24 +94,24 @@ function App() {
       <Form>
         <Header>User Onboarding Form</Header>
         <Section>
-          <Input type="text" name="firstname" id="firstname" placeholder="Enter First Name" onChange={(e) => change(e)} />
+          <Input type="text" name="firstname" id="firstname" placeholder="Enter First Name" value={formValues.firstname} onChange={(e) => change(e)} />
           <Label>First Name</Label>
         </Section>
         <Section>
-          <Input type="text" name="lastname" id="lastname" placeholder="Enter Last Name" onChange={(e) => change(e)} />
+          <Input type="text" name="lastname" id="lastname" placeholder="Enter Last Name" value={formValues.lastname} onChange={(e) => change(e)} />
           <Label>Last Name</Label>
         </Section>
         <Section>
-          <Input type="email" name="email" id="email" placeholder="Enter Email Address" onChange={(e) => change(e)} />
+          <Input type="email" name="email" id="email" placeholder="Enter Email Address" value={formValues.email} onChange={(e) => change(e)} />
           <Label>Email Address</Label>
         </Section>
         <Section>
-          <Input type="password" name="password" id="password" placeholder="Enter Password" onChange={(e) => change(e)} />
+          <Input type="password" name="password" id="password" placeholder="Enter Password" value={formValues.password} onChange={(e) => change(e)} />
           <Label>Password</Label>
         </Section>
         <CheckboxSection>
           <CheckboxLabel>Agree To Terms Of Service</CheckboxLabel>
-          <CheckboxInput type="checkbox" name="agree" id="agree" onChange={(e) => change(e)} />
+          <CheckboxInput type="checkbox" name="agree" id="agree" value={formValues.agree} onChange={(e) => change(e)} />
         </CheckboxSection>
         <Button disabled={disabled} onClick={(e) => onBoardUser(e)}>
           Submit
